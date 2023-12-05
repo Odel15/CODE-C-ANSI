@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void gerarFibonacci(int n) {
+    int a = 0, b = 1, c;
+
+    printf("Termos de Fibonacci: ");
+
+    for (int i = 0; i < n; i++) {
+        printf("%d, ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+}
+
+ int main() {
+ int n;
+
+ printf("Digite quantos termos da sequencia de Fibonacci voce quer:\n");
+ scanf("%d", &n); // Entrada de dados
+ 
+ if (n <= 1) {
+    printf("Numero de termos invalido\n"); // Testa menor ou igual que 1
+    }
+    
+     gerarFibonacci(n); // Função geradora
+    
+return 0;
+
+     
+ }
